@@ -1,5 +1,8 @@
 import cv2
-cap = cv2.VideoCapture("rtsp://admin:Alirezakarimi81*@192.168.1.107/live/ch00_1")
+usr = "admin"
+pwd = "[password]"
+ip = "192.168.1.1" # default for access-point mode
+cap = cv2.VideoCapture(f"rtsp://{usr}:{pwd}@{ip}/live/ch00_1")
 
 while(cap.isOpened()):
     ret, frame = cap.read()
